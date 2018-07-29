@@ -36,3 +36,9 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
 # vscode remove press and hold for better vim movement support
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# iterm load config from custom location
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# iterm specify config location
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string ~/.config/iterm
