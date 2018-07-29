@@ -9,6 +9,8 @@ endif
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
@@ -18,18 +20,15 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'cloudhead/neovim-fuzzy'
+Plug 'dracula/vim'
 
 call plug#end()
 
-
-" Configure
-colorscheme Spacegray
 
 highlight clear ALEWarningSign
 highlight clear ALEErrorSign
 
 set number
-
 
 
 " Variables
