@@ -12,7 +12,7 @@ setup_sudo() {
 
 setup_brew() {
   if ! type brew; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 }
 
@@ -26,10 +26,10 @@ setup_dots() {
 }
 
 setup_zshl() {
-  zsh=`brew --prefix`/bin/zsh &> /dev/null
+  zsh=`brew --prefix`/bin/zsh
 
   if ! cat /etc/shells | grep "$zsh"; then
-    echo "\n$zsh" | tee -a /etc/shells
+    echo "\n$zsh" | sudo tee -a /etc/shells
   fi
 
   sudo chsh -s $zsh $USER
