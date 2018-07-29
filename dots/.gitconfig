@@ -1,0 +1,7 @@
+[user]
+	name = Leon Pearce
+	email = leonp1991@gmail.com
+[alias]
+	up = pull --rebase --autostash
+[core]
+	editor = $EDITOR
