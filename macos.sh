@@ -42,3 +42,12 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # iterm specify config location
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string ~/.config/iterm
+
+# donts show tags in finder
+defaults write com.apple.finder ShowRecentTags -bool false
+
+# dont show removable media on desktop
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# set default finder path to $HOME
+defaults write com.apple.finder NewWindowTargetPath -string file://$HOME
