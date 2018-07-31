@@ -29,7 +29,7 @@ setup_zshl() {
   zsh=`brew --prefix`/bin/zsh
 
   if ! cat /etc/shells | grep "$zsh"; then
-    echo "\n$zsh" | sudo tee -a /etc/shells
+    echo "$zsh" | sudo tee -a /etc/shells
   fi
 
   sudo chsh -s $zsh $USER
