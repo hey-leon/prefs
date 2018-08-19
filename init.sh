@@ -16,6 +16,22 @@ setup_brew() {
   fi
 }
 
+setup_nvm() {
+	if ! -d ~/.nvm; then
+		mkdir ~/.nvm
+	fi
+
+  if ! type nvm; then
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  fi
+}
+
+setup_rvm() {
+  if ! type rvm; then
+    curl -sSL https://get.rvm.io | bash
+  fi
+}
+
 setup_pkgs() {
   brew tap homebrew/cask-fonts
   brew bundle
@@ -39,6 +55,8 @@ bootstrap() {
   setup_sudo
   setup_brew &> /dev/null
   setup_pkgs &> /dev/null
+  setup_nvm  &> /dev/null
+  setup_rvm  &> /dev/null
   setup_dots &> /dev/null
   setup_zshl &> /dev/null
 }
