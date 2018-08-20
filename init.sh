@@ -12,7 +12,7 @@ setup_sudo() {
 
 setup_brew() {
   if ! type brew; then
-    echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo | /usr/bin/ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
   fi
 }
 
@@ -34,6 +34,7 @@ setup_rvm() {
 
 setup_pkgs() {
   brew tap homebrew/cask-fonts
+  brew tap homebrew/cask-versions
   brew bundle
 }
 
