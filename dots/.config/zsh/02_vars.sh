@@ -8,7 +8,7 @@ export CLICOLOR=1
 export NVM_DIR="$HOME/.nvm"
 export RVM_DIR="$HOME/.rvm"
 
-export ANDROID_SDK_ROOT="$HOME/Libraries/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_HOME="$ANDROID_SDK_ROOT"
 
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
