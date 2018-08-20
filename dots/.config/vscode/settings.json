@@ -1,2 +1,10 @@
 {
+  "editor.minimap.enabled": false,
+  "eslint.autoFixOnSave": true,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false,
+  "terminal.integrated.shell.osx": "zsh",
+  "typescript.validate.enable": false,
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.activityBar.visible": false,
 }
