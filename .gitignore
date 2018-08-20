@@ -1,2 +1,4 @@
 dots/.config/configstore
 dots/.config/yarn
+dots/.config/nvim/autoload
+dots/.config/nvim/.netrwhist
