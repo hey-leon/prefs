@@ -17,9 +17,9 @@ setup_brew() {
 }
 
 setup_nvm() {
-	if ! -d ~/.nvm; then
-		mkdir ~/.nvm
-	fi
+  if ! -d ~/.nvm; then
+    mkdir ~/.nvm
+  fi
 
   if ! type nvm; then
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -49,6 +49,12 @@ setup_zshl() {
   fi
 
   sudo chsh -s $zsh $USER
+}
+
+setup_code() {
+  ln -s ~/.prefs/dots/.config/vscode/settings.json Library/Application\ Support/Code/User/settings.json
+  ln -s ~/.prefs/dots/.config/vscode/keybindings.json Library/Application\ Support/Code/User/keybindings.json
+  ln -s ~/.prefs/dots/.config/vscode/snippets Library/Application\ Support/Code/User/snippets
 }
 
 bootstrap() {
