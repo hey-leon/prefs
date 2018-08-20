@@ -11,7 +11,7 @@ brew 'tmux'
 brew 'tree'
 brew 'watchman'
 brew 'wget'
-brew 'yarn'
+brew 'yarn', args: [ 'without-node' ]
 brew 'zplug'
 brew 'zsh'
 

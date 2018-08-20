@@ -3,8 +3,6 @@
 #
 
 setup_sudo() {
-  echo "this script will need su access"
-
   if ! sudo -v; then
     exit 1
   fi
@@ -17,7 +15,7 @@ setup_brew() {
 }
 
 setup_nvm() {
-  if ! -d ~/.nvm; then
+  if ! [ -d ~/.nvm ]; then
     mkdir ~/.nvm
   fi
 
@@ -59,13 +57,16 @@ setup_code() {
 }
 
 bootstrap() {
-  setup_sudo
-  setup_brew &> /dev/null
-  setup_pkgs &> /dev/null
-  setup_nvm  &> /dev/null
-  setup_rvm  &> /dev/null
-  setup_dots &> /dev/null
-  setup_zshl &> /dev/null
+  echo "this script will need su access"
+  {
+    setup_sudo
+    setup_brew
+    setup_pkgs
+    setup_nvm
+    setup_rvm
+    setup_dots
+    setup_zshl
+  } &> /dev/null
 }
 
 if bootstrap; then
