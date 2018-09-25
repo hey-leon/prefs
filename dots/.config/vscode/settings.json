@@ -1,10 +1,23 @@
 {
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13.5,
   "editor.minimap.enabled": false,
   "eslint.autoFixOnSave": true,
+  "files.trimTrailingWhitespace": true,
   "flow.useNPMPackagedFlow": true,
   "javascript.validate.enable": false,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.format": "rubocop",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.lint": {
+    "rubocop": true
+  },
   "terminal.integrated.shell.osx": "zsh",
   "typescript.validate.enable": false,
-  "workbench.statusBar.feedback.visible": false,
+  "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
+  "workbench.statusBar.feedback.visible": false,
+  "breadcrumbs.enabled": true,
+  "files.insertFinalNewline": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
